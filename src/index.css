@@ -1,0 +1,39 @@
+:root {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light only;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light only;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/Century\ Gothic.TTF');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/GOTHICB.TTF');
+  font-weight: 600;
+}
