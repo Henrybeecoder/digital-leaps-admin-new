@@ -88,7 +88,7 @@ const LinkComponent = ({
             className={`flex items-center gap-2 py-3 px-7 rounded-l-[20px] font-semibold ${
               isActive
                 ? 'bg-white text-mainblue fill-white stroke-mainblue'
-                : 'stroke-white fill-mainblue'
+                : 'stroke-white fill-mainblue text-white'
             }`}>
             {children}
             <span>{text}</span>

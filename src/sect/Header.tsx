@@ -49,7 +49,7 @@ const Header = () => {
               className={`pointer-events-auto z-30 fixed top-0 bottom-0 left-0 w-[68%] overflow-hidden
          bg-mainblue flex flex-col p-3`}>
               <div className='px-7 py-4 mx-auto w-fit mt-2'>
-                <img src={logo} width={140} className='' />
+                <img src={logo} width={90} className='' />
               </div>
 
               <div className='flex flex-col gap-2 mt-8 px-4'>
@@ -123,7 +123,7 @@ const Header = () => {
 
       <div className='relative'>
         <Root open={openS} onOpenChange={setOpenS}>
-          <Trigger className='flex items-center gap-2 bg-boldblue py-1.5 px-5 rounded-[5px] text-xs md:text-[13px]'>
+          <Trigger className='flex items-center gap-2 bg-boldblue py-1.5 px-5 rounded-[5px] text-xs md:text-[13px] text-white'>
             <span>Eid Hamouda</span>
             <img src={arrowDown} width={20} />
           </Trigger>
