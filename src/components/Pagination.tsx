@@ -1,24 +1,30 @@
+import './index.css';
+
 const list = Array.from(Array(6).keys());
 
-const Pagination = () => {
+interface Props {
+  prev: () => void;
+  next: () => void;
+  prevDisabled: boolean;
+  nextDisabled: boolean;
+}
+
+const Pagination = ({ next, nextDisabled, prev, prevDisabled }: Props) => {
   return (
-    <div className='w-full overflow-x-auto'>
-      <div className='flex gap-2 w-fit mx-auto mt-14 mb-10 h-[43px]'>
-        <button className='border border-[#ececec] rounded-[5px] text-[#667085] h-full px-3 text-[15px] shadow-sm'>
-          Previews
+    <div className='w-100 container-oveflow'>
+      <div className='pagination-container'>
+        <button disabled={prevDisabled} onClick={prev} className='prev'>
+          Previous
         </button>
-        <button className='border rounded-[5px] bg-mainblue w-[43px] h-full font-medium'>
+        {/* <button disabled className='active w-[43px] h-full font-medium'>
           1
         </button>
         {list.map((x) => (
-          <button
-            key={x}
-            className='border border-[#ececec] rounded-[5px] w-[43px] h-full text-[#667085] font-medium'>
+          <button disabled key={x} className=''>
             {x + 2}
           </button>
-        ))}
-
-        <button className='border border-[#ececec] rounded-[5px] text-[#667085] h-full px-3 text-[15px] shadow-sm'>
+        ))} */}
+        <button disabled={nextDisabled} onClick={next} className='next'>
           Next
         </button>
       </div>

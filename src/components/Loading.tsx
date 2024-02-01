@@ -1,18 +1,16 @@
-'use client';
-
-import { CirclesWithBar } from 'react-loader-spinner';
+import { FallingLines } from 'react-loader-spinner';
 
 export const Loading = ({
-  position = 'fixed',
+  position = 'absolute',
 }: {
   position?: 'fixed' | 'absolute';
 }) => {
   return (
     <div
       className={`flex justify-center items-center ${
-        position === 'fixed' ? 'fixed' : 'absolute'
-      } inset-0 bg-white z-50 w-screen h-screen`}>
-      <CirclesWithBar width={70} color='gray' />
+        position === 'fixed' ? 'fixed w-screen' : 'absolute w-full'
+      } inset-0 bg-white z-50  h-screen`}>
+      <FallingLines width={'70'} color='#24559c' />
     </div>
   );
 };
@@ -24,11 +22,11 @@ export const LoadingBlur = ({
 }) => {
   return (
     <div
-      className={`flex justify-center items-center fixed inset-0 bg-white/30
-     backdrop-blur-[2px] z-50 ${position} ${
+      className={`loading-blur flex justify-center items-center fixed inset-0 bg-white/30
+     backdrop-blur-[2px] ${position} ${
         position === 'absolute' ? 'inset-[2px]' : ''
       }`}>
-      <CirclesWithBar width={70} color={'gray'} />
+      <FallingLines width={'70'} color={'#24559c'} />
     </div>
   );
 };

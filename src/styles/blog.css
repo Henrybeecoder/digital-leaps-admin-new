@@ -1,0 +1,246 @@
+.blog-category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.blog-category-card img {
+  height: 200px;
+}
+
+.blog-article-form-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.article-details-container {
+  border: 1px solid #8080805b;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.article-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 1px solid #8080805b;
+  padding: 10px 0;
+}
+
+.blog-card-container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-card-container img {
+  height: 250px;
+  width: 100%;
+}
+
+.blog-article-text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.blog-article-text-section span {
+  color: #6941c6;
+  font-family: Century Gothic;
+  font-size: 12.091px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.blog-article-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.blog-article-tags p {
+  color: #fff;
+  text-align: center;
+  font-size: 11.439px;
+  font-weight: 500;
+  line-height: 23.485px; /* 142.857% */
+  border-radius: 12.788px;
+  background: var(--Accent, #22319e);
+  padding: 1px 8px;
+}
+
+.post-container {
+  display: flex;
+  padding: 3vw 5vw;
+  column-gap: 7vw;
+  width: 100%;
+  justify-content: space-between;
+}
+.blg-details-hero {
+  display: flex;
+  background: #e7f4fa;
+  padding: 30px 70px;
+}
+
+.blg-details-hero article {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: start;
+  padding-left: 80px;
+}
+.blg-details-hero article h3 {
+  color: var(--Accent, #22319e);
+  /* font-family: Century Gothic; */
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.blg-details-hero article p {
+  color: var(--secondary-500, #696a75);
+  /* font-family: Century Gothic; */
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.blg-details-hero article div {
+  display: flex;
+  gap: 8px;
+}
+
+.blg-details-hero article div span {
+  border-radius: 21.333px;
+  background: var(--Accent, #22319e);
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.blg-details-hero-img {
+  width: 50%;
+}
+
+.blg-details-hero-img img {
+  width: 100%;
+}
+
+.blg-writing {
+  width: 60%;
+  color: var(--Font, #777);
+  /* font-family: Century Gothic; */
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blg-writing-content h4 {
+  color: var(--Accent, #22319e);
+  /* font-family: Century Gothic; */
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.blg-writing-content img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.blg-details-featured {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.blg-details-featured-h3 {
+  color: var(--Accent, #22319e);
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0 40px;
+}
+
+.adverts {
+  width: 100%;
+  height: 27.1875rem;
+  border-radius: 0.75rem;
+  border: #ccc 1px solid;
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.adverts-image {
+  width: 100%;
+  height: 100%;
+}
+
+.adverts p {
+  padding: 0;
+  margin: 0;
+}
+.blg-featured {
+  color: var(--primary-color);
+  padding-left: 2.3rem;
+  font-weight: 600;
+}
+
+.details-articles-section-slider-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .blog-article-form-container {
+    width: 100%;
+  }
+  .details-articles-section-slider-wrapper {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 20px;
+    gap: 30px;
+  }
+  .blg-details-featured {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .blg-details-hero {
+    flex-direction: column;
+  }
+
+  .blg-details-hero article {
+    width: 100%;
+    padding: 48px 0;
+  }
+  .blg-details-hero-img {
+    width: 100%;
+  }
+
+  .post-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .blg-writing {
+    width: 100%;
+  }
+  .blg-image {
+    height: 20rem;
+  }
+  .adverts {
+    width: 100%;
+    height: 10rem;
+  }
+  .blg-subtitle {
+    font-size: 1.5rem;
+  }
+}

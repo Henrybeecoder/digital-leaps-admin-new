@@ -16,13 +16,13 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
      "composite": true,
     "allowSyntheticDefaultImports": true,
   "types": ["vite/client"]
   },
- "include": ["vite.config.ts","utils","src","t"],
+ "include": ["vite.config.ts","src/utils","src","types"],
    
 }

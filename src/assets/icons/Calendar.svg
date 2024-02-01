@@ -1,0 +1,14 @@
+<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Calendar">
+<path id="Line_200" d="M1.09253 8.57145H18.9165" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_201" d="M14.442 12.4767H14.4512" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_202" d="M10.0047 12.4767H10.014" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_203" d="M5.55793 12.4767H5.5672" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_204" d="M14.442 16.3634H14.4512" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_205" d="M10.0047 16.3634H10.014" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_206" d="M5.55793 16.3634H5.5672" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_207" d="M14.0438 1.16699V4.45777" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line_208" d="M5.9654 1.16699V4.45777" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M14.2383 2.74609H5.77096C2.83427 2.74609 1 4.38203 1 7.38912V16.4388C1 19.4931 2.83427 21.1669 5.77096 21.1669H14.229C17.175 21.1669 19 19.5215 19 16.5144V7.38912C19.0092 4.38203 17.1842 2.74609 14.2383 2.74609Z" stroke="#5E6366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

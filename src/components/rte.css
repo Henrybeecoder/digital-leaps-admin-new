@@ -1,0 +1,14 @@
+.quill {
+  border: 1px solid #cfd3d4;
+  border-radius: 7px;
+}
+
+.quill .ql-toolbar {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #cfd3d4;
+  background-color: #e9e9e973;
+}
+
+.quill .ql-container {
+  border: none;
+}

@@ -3,20 +3,22 @@ import {
   type TextareaHTMLAttributes,
   forwardRef,
 } from 'react';
+import './index.css';
 
 export interface InputTempProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   touched?: boolean;
   error?: string | string[];
   hColor?: 'light' | 'dark';
+  icon?: 'left' | 'right';
 }
 
 export interface TextareaTempProps
   extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-  label: string;
+  label?: string;
   touched?: boolean;
   error?: string | string[];
-  hColor?: 'light' | 'dark';
+  // hColor?: 'light' | 'dark';
   resize?: boolean;
   rows?: number;
 }
@@ -25,42 +27,53 @@ export const InputTemp = forwardRef<HTMLInputElement, InputTempProps>(
   (props, ref) => {
     //TODO switch ibg to inputprops
     const {
-      label,
+      label: labelText,
       touched,
-      hColor = 'dark',
       required,
       error,
       className,
       children,
+      style,
+      icon = 'left',
       ...rest
     } = props;
 
     return (
-      <div className={`w-full ${className || ''}`}>
-        <div className='flex justify-between w-full h-5 mb-2 mt-1'>
-          <h1
-            className={`${
-              hColor === 'light' ? 'text-neutral-200 ' : 'text-neutral-700'
-            } ml-1 flex gap-2`}>
-            {label}
-            {required && <span className='text-red-500'>*</span>}
-          </h1>
-          {touched && error && (
-            <p className='text-xs text-red-500 pr-4'>{error?.toString()}</p>
-          )}
+      <div className={`w-100 form-input-container ${className || ''}`}>
+        <div className='form-input-text'>
+          <label>
+            {labelText}
+            {required && <span>*</span>}
+          </label>
+          {error && <p>{error?.toString()}</p>}
         </div>
-        <div className='relative'>
+        <div className='form-input'>
+          {children && (
+            <aside
+              className={`${
+                icon === 'left'
+                  ? 'form-input-icon-left'
+                  : 'form-input-icon-right'
+              }`}>
+              {children}
+            </aside>
+          )}
           <input
             ref={ref}
-            className={`bg-transparent w-full py-1 rounded-lg text-base ${
-              children ? 'pl-3 pr-12' : 'px-3'
-            }
-          text-start placeholder:text-opacity-60 text-md outline-none border border-neutral-300 disabled:bg-neutral-100`}
+            className={`${
+              children && icon === 'left'
+                ? 'form-input-children-p'
+                : children && icon === 'right'
+                ? 'form-input-children-p-right'
+                : ''
+            } ${error ? 'error' : ''}`}
+            style={{
+              ...style,
+              paddingLeft: children && icon === 'left' ? '45px' : undefined,
+              paddingRight: children && icon === 'right' ? '45px' : undefined,
+            }}
             {...rest}
           />
-          <div className='absolute center-y right-2 flex justify-center'>
-            {children}
-          </div>
         </div>
       </div>
     );
@@ -73,39 +86,37 @@ export const TextareaTemp = forwardRef<HTMLTextAreaElement, TextareaTempProps>(
   (props, ref) => {
     //TODO switch ibg to inputprops
     const {
-      label,
+      label: labelText,
       touched,
-      hColor = 'light',
       error,
       resize,
       className,
       required,
+      rows = 4,
       ...rest
     } = props;
 
     return (
-      <div className={`w-full ${className || ''}`}>
-        <div className='flex justify-between w-full h-5 mb-2'>
-          <h1
-            className={`${
-              hColor === 'light' ? 'text-neutral-600 ' : 'text-gray-700'
-            } flex gap-2 `}>
-            {label}
-            {required && <span className='text-red-500'>*</span>}
-          </h1>
-          {touched && error && (
-            <span className='text-xs text-red-500 pr-4'>
-              {error?.toString()}
-            </span>
+      <div className={`w-100 ${className || ''}`}>
+        <div
+          className='form-input-text'
+          style={{ height: labelText ? undefined : 'auto' }}>
+          {labelText && (
+            <label>
+              {labelText}
+              {required && <span>*</span>}
+            </label>
           )}
+          {error && <p>{error?.toString()}</p>}
         </div>
-        <textarea
-          ref={ref}
-          className={`border border-neutral-200 disabled:bg-neutral-100 w-full ${
-            !resize && 'resize-none'
-          } rounded-lg text-base placeholder:text-opacity-60 py-1 px-3 outline-none `}
-          {...rest}
-        />
+        <div className='form-input'>
+          <textarea
+            ref={ref}
+            {...rest}
+            rows={rows}
+            style={{ borderColor: error ? 'red' : '#abafb1' }}
+          />
+        </div>
       </div>
     );
   }

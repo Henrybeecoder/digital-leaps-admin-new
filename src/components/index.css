@@ -1,0 +1,448 @@
+.pagination-container {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  gap: 9px;
+  margin-top: 55px;
+  margin-bottom: 40px;
+  height: 44px;
+}
+
+.pagination-container button:disabled {
+  background-color: transparent;
+  color: #667085;
+}
+
+.pagination-container button {
+  border: 1px solid #ececec;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(36 85 156);
+  color: #fff;
+  width: 44px;
+  font-weight: 500;
+}
+.pagination-container .active {
+  background-color: rgb(36 85 156);
+  color: #fff;
+}
+
+.pagination-container .prev,
+.pagination-container .next {
+  padding: 0 12px;
+  width: auto;
+}
+
+.form-input-container {
+  display: block;
+  /* flex-direction: column; */
+}
+
+.form-input-text {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 20px;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.form-input-text label {
+  display: flex;
+  gap: 4px;
+  margin-left: 3px;
+  color: var(--black-4, #5e6366);
+  /* font-family: Montserrat; */
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.form-input-text label span,
+.form-image-select label span,
+.form-select-container label span,
+.form-datepicker label span,
+.form-radiogroup label span {
+  color: red;
+  margin-left: 3px;
+}
+
+.form-input-text p,
+.form-datepicker div p {
+  color: red;
+  font-size: 12px;
+  padding-right: 16px;
+}
+.form-input {
+  position: relative;
+}
+.form-input aside {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-input .form-input-icon-left {
+  left: 10px;
+}
+.form-input .form-input-icon-right {
+  right: 10px;
+}
+.form-input .error {
+  border: 1px solid red;
+}
+.form-input input,
+.form-input textarea {
+  background-color: transparent;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* border: 1px solid #22319e; */
+  border: 1px solid #cfd3d4;
+}
+
+.form-input input:invalid,
+.form-input textarea:invalid {
+  border: 1px solid rgba(255, 0, 0, 0.664);
+}
+
+.form-input input:focus,
+.form-input textarea:focus {
+  border: 1px solid #22319e;
+}
+
+.form-input input:disabled,
+.form-input textarea:disabled {
+  background-color: #e4e4e47a;
+  color: #2d2e30;
+}
+
+.form-input-children-p {
+  padding-left: 50px;
+}
+
+.form-image-select,
+.form-select-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-datepicker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-switch label,
+.form-image-select label,
+.form-select-container label,
+.form-datepicker label,
+.form-radiogroup label {
+  color: var(--black-4, #5e6366);
+  /* font-family: Montserrat; */
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.form-image-select .upload-image-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+}
+
+.form-image-select .upload-image-preview img {
+  max-height: 300px;
+  max-width: 800px;
+  width: 100%;
+  border: 1px solid #22319e;
+  border-radius: 5px;
+}
+.form-image-select .upload-image-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-image-select .upload-image-group p {
+  font-size: 15px;
+  color: #3d3d3dd5;
+}
+
+.form-image-select .upload-image-preview button {
+  width: 30%;
+  background-color: #24559c;
+  border-radius: 7px;
+  padding: 8px 0;
+  color: #fff;
+  font-size: 14px;
+  align-self: center;
+}
+
+.form-image-select .upload-image-group button {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: fit-content;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background: var(--input-default-background, rgba(239, 241, 249, 0.6));
+  color: var(--black-2, #abafb1);
+  /* font-family: Century Gothic; */
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form-select {
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--input-default-background, rgba(239, 241, 249, 0.6));
+  width: fit-content;
+  padding: 1% 20px;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.form-select-error {
+  border: 1px solid rgba(255, 0, 0, 0.664);
+}
+
+.form-select .form-select-value::placeholder {
+  color: var(--black-2, #abafb1);
+}
+
+.form-select:disabled {
+  opacity: 0.5;
+}
+
+/* .custom-reactdatepicker-icon {
+  background-image: url('../assets/icons/Calendar.svg');
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid #c0c0c0;
+} */
+
+.form-datepicker input {
+  border: none;
+  outline: none;
+}
+
+/* .form-datepicker div div {
+  border-color: red;
+} */
+
+.form-datepicker-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #abafb1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.form-radiogroup-container {
+  display: flex;
+  gap: 50px;
+  margin-top: 8px;
+}
+
+.form-radio-container {
+  border: 1px solid #abafb1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 25px;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  gap: 15px;
+}
+
+.form-radio-container label {
+  color: var(--black-2, #abafb1);
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form-radio-container button {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid #b6b6b6;
+  overflow: hidden;
+}
+
+.form-radio-container button span::after {
+  content: '';
+  background-color: #22319e;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.form-select-content {
+  z-index: 70;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #d4d4d4af;
+  box-shadow: 0px 4px 20px 0px rgba(61, 70, 112, 0.08);
+}
+
+.form-select-item {
+  padding: 8px 16px;
+  outline: none;
+  border-bottom: 1px solid #cacaca;
+  cursor: pointer;
+}
+
+.form-select-item:last-child {
+  border: none;
+}
+
+.form-select-item:hover {
+  background-color: #24559c;
+  color: #fff;
+}
+
+.stars-container {
+  display: flex;
+  gap: 30px;
+  color: #d6d6d693;
+}
+
+.ProgressRoot {
+  position: relative;
+  overflow: hidden;
+  background: #e6eaeeb2;
+  border-radius: 99999px;
+  width: 300px;
+  height: 6px;
+  /* Fix overflow clipping in Safari */
+  /* https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0 */
+  transform: translateZ(0);
+}
+
+.ProgressIndicator {
+  background-color: #22319e;
+  width: 100%;
+  height: 100%;
+  transition: transform 660ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.form-select-days {
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--input-default-background, rgba(239, 241, 249, 0.6));
+  width: fit-content;
+  padding: 1% 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.form-select-days div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-right: 1px solid rgba(128, 128, 128, 0.637);
+  padding: 5px 10px 5px 0;
+}
+
+.form-select-days div input {
+  width: 15px;
+  height: 15px;
+}
+
+.form-select-days div:last-child {
+  border: none;
+}
+
+.SwitchRoot {
+  width: 45px;
+  height: 23px;
+  background-color: #abafb1;
+  border-radius: 9999px;
+  position: relative;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.308); */
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+  outline: none;
+}
+.SwitchRoot:focus {
+  box-shadow: 0 0 0 1px #22319e;
+}
+.SwitchRoot[data-state='checked'] {
+  background-color: #22319e;
+}
+
+.SwitchThumb {
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border-radius: 9999px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.308);
+  transition: transform 100ms;
+  transform: translateX(4px);
+  will-change: transform;
+}
+.SwitchThumb[data-state='checked'] {
+  transform: translateX(25px);
+}
+
+.form-switch {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .form-radiogroup-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .form-radio-container {
+    padding: 0 25px;
+    width: 100%;
+    height: 40px;
+    gap: 10px;
+  }
+  .form-radio-container button {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    padding: 1px;
+  }
+  .form-image-select .upload-image-preview {
+    width: 100%;
+  }
+
+  .form-datepicker {
+    width: 100%;
+  }
+  .form-select-days div {
+    padding: 7px 8px 7px 0;
+  }
+  .form-select-days div:last-child {
+    padding: 7px 0;
+  }
+  .form-select-days div p {
+    font-size: 14px;
+  }
+}

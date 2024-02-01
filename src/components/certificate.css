@@ -1,0 +1,159 @@
+.cert-container {
+  position: relative;
+  /* width: 1000px; */
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 3%;
+  /* border: 1px solid red; */
+}
+
+.cert-vector-1 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 60%;
+}
+
+.cert-vector-2 {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 48%;
+}
+
+.cert-vector-3 {
+  top: 4.8%;
+  left: 0;
+  position: absolute;
+  width: 64%;
+}
+
+.cert-content {
+  display: flex;
+  align-items: flex-end;
+  z-index: 100;
+  gap: 50px;
+  width: 95%;
+}
+
+.cert-content section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.cert-content section .img {
+  width: 60%;
+  height: 60%;
+}
+
+.cert-content section div div {
+  display: flex;
+  gap: 15px;
+}
+
+.cert-blue-divider {
+  background: #1393c9;
+  height: 380px;
+  width: 6px;
+  align-self: center;
+}
+
+.cert-main-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+
+.cert-main-content img {
+  margin-bottom: 20px;
+}
+
+.cert-main-content h2 {
+  color: #24559c;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 60.2px;
+  font-weight: 400;
+  line-height: 40.8px; /* 66.667% */
+  letter-spacing: -3.76px;
+}
+
+.cert-main-content h4 {
+  color: #24559c;
+  font-family: Montserrat;
+  font-size: 23.4px;
+  font-weight: 400;
+  line-height: 25.8px;
+}
+.cert-main-content h3 {
+  color: #24559c;
+  /* font-family: Poppins; */
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: -15px;
+}
+
+.cert-main-content h5 {
+  color: #24559c;
+  /* font-family: Poppins; */
+  font-size: 24px;
+  font-weight: 400;
+}
+.cert-main-content h1 {
+  color: #1c1c1c;
+  font-family: 'Edwardian Script ITC', sans-serif;
+  font-size: 75px;
+  font-weight: 400;
+}
+
+.cert-text {
+  color: #24559c;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  /* line-height: 43.2px; */
+}
+
+.cert-signature-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10%;
+  padding: 0 80px 0 20px;
+}
+
+.cert-signature-container div {
+  width: 23%;
+  text-align: center;
+}
+
+.cert-signature-container div h6 {
+  color: #9c8787;
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.cert-signature-container div div {
+  width: 100%;
+  height: 2px;
+  background-color: #1c1c1c;
+}
+
+.cert-signature-container div p {
+  color: #1c1c1c;
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 400;
+  white-space: nowrap;
+}
